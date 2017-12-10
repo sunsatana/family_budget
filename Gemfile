@@ -17,6 +17,7 @@ gem 'sass-rails'
 gem 'rspec-rails'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby'
+gem 'turbolinks'
 
 group :doc do
   gem 'sdoc', require: false
