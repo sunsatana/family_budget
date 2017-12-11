@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>FamilyBudget</title>
-    <%= csrf_meta_tags %>
+<%= render 'layouts/header' %>
+        <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>"><%= value %></div>
+          <% end %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <div> Family Budget System
-    </div>
-    <div class="container">
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Home",    '#' %></li>
-              <li><%= link_to "Help",    '#' %></li>
-              <li><%= link_to "Sign in", '#' %></li>
-            </ul>
-          </nav>
-        </div>
-        <hr>
     <%= yield %>
 <%= render 'layouts/footer' %>
 </body>
